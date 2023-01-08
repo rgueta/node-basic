@@ -19,7 +19,7 @@ app.get('/', async (req,res)=>{
 
 app.use('/api/users',usersRoutes);
 
-app.get('/users',async (req,res) => {
+app.get('/ping',async (req,res) => {
     // const result = await pool.query(`SELECT "Hello world" as RESULT`)
     // console.log(result[0])
     // res.json(result[0])

@@ -15,12 +15,12 @@
 //  ---------- MONGO  ---------------------------
 
 import mongoose from "mongoose";
-import { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME, DB_URL } from "./config.js";
+import { DB_HEAD_URL, DB_USER, DB_PASSWORD, DB_HOST, DB_NAME, DB_URL } from "./config.js";
 
 console.log('url -> ', DB_URL)
 
 mongoose.set('strictQuery',false)
-mongoose.connect(DB_URL).then(() => console.log('DB Connected!'));
+mongoose.connect(`${DB_HEAD_URL}://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`).then(() => console.log('DB Connected!'));
 
 
 // mongoose.set('useCreateIndex', true);
