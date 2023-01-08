@@ -1,4 +1,4 @@
-import Users  from "../models/Users.js";
+import Users  from "../models/users.js";
 import {Types} from 'mongoose';
 import { response } from "express";
 
